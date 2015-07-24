@@ -1,0 +1,32 @@
+主页框架：主题、样式、色彩、layout、
+    
+    数据库表：博客表(blogID, blogTitle, blogContent, categoryTag, author, createDate, lastEditDate, viewedCount, hasComment )、留言表(commentID, commentContent, commentPerson, commentDate, commentToBlogID, commentToPersonName )、网络资源收藏表(sourceID,sourceDesc, sourceUrl )、用户表（userID, userName, userImg, userQQ, userMail）、文章分类表（catID, catName, catDescrip）
+    file：categories.txt; 
+    数据库管理模块：inc/连接、读取、修改、删除记录； 
+    博客展示模块：主栏目按时间排博客、右侧上栏按只是门类排序、右侧下栏按热门排序、
+    博客编写模块：
+    过客留言模块：
+    网络资料收藏模块：增加tag分类
+    搜索模块：
+
+    面向对象：
+        blog类：{blogID, xxx fields in blog table， Array[comment]，:  }
+        comment类：{ fields in comment table   }
+    
+创建数据库：mysql> create database if not exists MyBlogDB character set UTF8;
+mysql> use MyBlogDB;
+新建表：mysql> create table MyBlogDB.blog(blogID Bigint(8) unsigned primary key auto_increment, blogTitle varchar(128));
+新增字段：mysql> alter table blog add blogContent varchar(2000);
+新增记录行：mysql> insert into blog(blogTitle) values("vimxuexi1");
+mysql> insert into blog set blogTitle="javascriptxuexi";
+修改原字段名称及类型： mysql> alter table blog change blogTitle blogTitle varchar(100); 只改变类型可以用alter table x modify a int;
+查看所有字段信息: mysql> show full columns from blog;
+删除字段：mysql> alter table blog drop field_name;
+
+ //use "show variables like '%char%';" in mysql, to see character coding. 
+//we can use "set names utf8;" or "set character_set_client=utf8" to change client character code from, like gbk to utf8, because, sometimes the CMD/server site character code is gbk/latin1 etc., but client/connect code is utf8, they are not consistent. then chinese characters will mess up.  
+// of course we can change it permanently in /etc/mysql/my.cnf at "character_set_server=utf8" & at "default_character_set=utf8"              
+   48   $db->query("set names gbk"); 
+status可以看到数据库的字符信息等。
+为了保证在server、mysql、客户端看到的字符都一致，最好是在每次写insert into 、update、select等数据库操作之前，写一个$db->query("set names utf8");将字符转换为utf8编码保存和显示，保证全部一致。就不会出现乱码了。
+
