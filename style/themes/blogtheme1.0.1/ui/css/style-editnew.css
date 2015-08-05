@@ -1,0 +1,145 @@
+@charset "utf-8";
+::selection {
+  background: #d9534f;
+  color: #ffffff;
+}
+
+body {
+  background-color: #f0f0f0;
+  background: url("../images/bg.jpg");
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 100;
+  color: red;
+  text-align: center;
+}
+
+#formdiv {
+  position: absolute;
+  float: left;
+  left: 5%;
+  width: 90%;
+  border: none;
+}
+#blogTitle {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 30px;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  line-height: 28px;
+  border:none;
+  outline: thin dotted #888;
+  font-size: 18px;
+  color: black;
+    font-family: 'Microsoft Yahei', Simsun;
+    -webkit-text-size-adjust: none;
+  
+}
+
+::-webkit-input-placeholder {
+  color:rgba(179, 44, 255, 0.3);  
+}
+
+input::-webkit-input-placeholder{
+  font-size: 18px;
+}
+
+#formdiv textarea {
+  display: none;
+  padding: 0;
+} 
+
+.container.richTextContainer {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 80%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-toolbar {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  border: none;
+  outline: thin dotted #888;
+}
+
+.btn-toolbar.btn-group {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+}
+
+#editor {
+  position: relative;
+  float: left;
+  width: 100%;
+  resize: none;
+
+  border: none;
+  outline: thin dotted #888;
+
+  line-height: 28px;
+  font-size: 18px;
+  font-family: 'Microsoft Yahei' Simsun;
+  color: black;
+  -webkit-text-size-adjust: auto;
+  text-align: left;
+/*  text-indent: 2em; */
+  overflow: auto;
+}
+
+@media (max-height:567px){
+  #editor {
+    height: 450px;
+  }
+}
+@media (min-height:568px) and (max-height:999px){
+  #editor {
+    height: 600px;
+  }
+}
+
+@media (min-height:1000px){
+  #editor {
+    height: 1000px;
+  }
+}
+
+#submitToolbarDiv {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit{
+  height: 100%;
+  background-color: rgba(255, 174, 249, 0.5);
+  border: none;
+  font-family: 'Microsoft Yahei', Simsun;
+  line-height: 20px;
+  color: blue;
+  font-size: 16px;
+}
+
+.submit:hover{
+  color: red;
+  font-size: 18px;
+}
+
+.text{
+  font-size: 18px;
+  text-align: left;
+}
+

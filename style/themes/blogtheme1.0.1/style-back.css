@@ -1,0 +1,58 @@
+@charset "utf-8";
+::selection {
+  background: #d9534f;
+  color: #ffffff;
+}
+
+body {
+  background-color: #f0f0f0;
+  background: url("ui/images/bg.jpg");
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 100;
+}
+
+a {
+  color: #666;
+}
+
+a:hover {
+  color: #b94a48;
+}
+
+.classA .classB .classC {
+  color: red;
+  font-size: 50px;
+}
+
+textarea {
+  color: red;
+  font-size: 22px;
+  font-family: 'Microsoft Yahei', Simsun;
+  -webkit-text-size-adjust: none;
+  resize: none;
+  line-height: 28px;
+  border-color: red;
+  border: 1px solid #888;
+  outline: thin dotted #0000ff;
+  width: 80%;
+  height: 400px;
+  overflow: auto;
+  text-align: left;
+} 
+
+.placeholder {
+  color: red;
+}
+
+form input {
+  font-size: 22px;
+  color: red; 
+  text-align: center;
+}
+
+.text{
+  font-size: 12px;
+  text-align: left;
+}
